@@ -32,10 +32,10 @@ h1 {
     background-size: cover;
    /* position:relative; */
 	margin:0 auto; 
-    height: 550px;
+    height: 500px;
     min-width:100%;
   
-/*object-fit: fill;*/
+object-fit: fill
 
 }
 .content {
@@ -44,16 +44,12 @@ h1 {
     background-color: black;
     opacity: 0.5;
     border-radius: 20px;
-    z-index: 3;
+    z-index: 2;
     display: grid;
   
     width: 768px;
-    height: 500px;
-    left: 300px;
-    top: 100px;
-    /*display: none;*/
  
-    /*margin: 0 auto;*/
+    margin: 0 auto;
     grid-gap: 10px;
     grid-template-columns: repeat(24, 1fr);
     grid-auto-rows: minmax(50px, auto);
@@ -69,7 +65,7 @@ h1 {
 }
 
 header {
-    height: 75px;
+    height: 100px;
     width: 100%;
     color: #FFE11D;
     background-color: black;
@@ -77,9 +73,8 @@ header {
 
 footer {
     position:absolute;
-    bottom: 0;
 	width:100%;
-    height: 35px;
+    height: 65px;
     color: #FFE11D;
     background-color: black;
 
@@ -154,16 +149,13 @@ a:hover {
     color: #FFE11D;
 }
 .challenge {
-    position: absolute;
-   right: 100px;
-    bottom: 25px;
-    /*display: none; kad počne igra*/
-    
-  
- 
+    position: relative;
+    left: 690px;
+    bottom: -155px;
+    opacity: 1;
 }
 .challenge:hover {
-    
-   
+     /*opacity: 0.5;*/
+     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: sepia(100%);
 }
