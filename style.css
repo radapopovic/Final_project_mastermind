@@ -4,22 +4,19 @@
     -moz-box-sizing: border-box;
      -ms-box-sizing: border-box;
     box-sizing: border-box;
-}
-html 
-{ 
-    height: 100%; 
-}
-
-body { 
-    height: 100%; 
-    overflow:hidden;
-  
-
-}
-html,body {
-	margin:0;
+    margin:0;
 	padding:0;
 }
+
+
+body { 
+    height: 100vh; 
+    background: url(img/myImg/major-locations-south-park-sunshine.png) no-repeat center;
+    background-size: 100% 100%;
+  
+   
+}
+
 h1 {
     letter-spacing: 4px;
     word-spacing: 5px;
@@ -28,12 +25,9 @@ h1 {
     margin:0;
 }
 #container {
-    background: url(img/myImg/major-locations-south-park-sunshine.png) no-repeat center;
-    background-size: cover;
-   /* position:relative; */
-	margin:0 auto; 
-    height: 550px;
-    min-width:100%;
+   height: 100%;
+	display: flex;
+    
   
 /*object-fit: fill;*/
 
@@ -54,7 +48,7 @@ h1 {
     /*display: none;*/
  
     /*margin: 0 auto;*/
-    grid-gap: 10px;
+    grid-gap: 1px;
     grid-template-columns: repeat(24, 1fr);
     grid-auto-rows: minmax(50px, auto);
     grid-template-areas: 
@@ -107,11 +101,11 @@ a:hover {
     top: 10px;
     padding: 0;
 }
-
+.div_circle
 .circle {
     grid-area: c;
     border-radius: 50%;
-    background-color: black;
+    background-color: rgb(230, 16, 16);
     height: 30px;
     cursor: pointer;
     margin-left: 5px;
@@ -120,7 +114,7 @@ a:hover {
 
 .win {
     grid-area: w;
-    background-color: black;
+    background-color: rgb(228, 41, 41);
     border-radius: 15%;
     width: 120px;
 	height: 30px;
@@ -131,32 +125,36 @@ a:hover {
 .ok_btn {
     grid-area: o;
     color: #FFE11D;
-    background-color: black;
+    height: 40px;
+    width: 50px;
+    background-color: rgb(235, 38, 38);
 }
 
 .guessed {
     grid-area: g;
-    background-color: black;
+    background-color: rgb(236, 31, 31);
     border-radius: 15%;
 }
 
 .btn_new {
     grid-area: n;
-    background-color: black;
+    background-color: rgb(238, 27, 27);
     border-radius: 15%;
+    height: 40px;
+    width: 50px;
     color: #FFE11D;
 }
 
 .btn_rules {
     grid-area: r;
-    background-color: black;
+    background-color: rgb(236, 34, 34);
     border-radius: 15%;
     color: #FFE11D;
 }
 .challenge {
     position: absolute;
    right: 100px;
-    bottom: 25px;
+    bottom: 35px;
     /*display: none; kad počne igra*/
     
   
