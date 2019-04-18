@@ -1,0 +1,169 @@
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html 
+{ 
+    height: 100%; 
+}
+
+body { 
+    height: 100%; 
+    overflow:hidden;
+  
+
+}
+html,body {
+	margin:0;
+	padding:0;
+}
+h1 {
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    text-align: center;
+    color: #FFE11D;
+    margin:0;
+}
+#container {
+    background: url(img/myImg/major-locations-south-park-sunshine.png) no-repeat center;
+    background-size: cover;
+   /* position:relative; */
+	margin:0 auto; 
+    height: 550px;
+    min-width:100%;
+  
+/*object-fit: fill;*/
+
+}
+.content {
+
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 20px;
+    z-index: 3;
+    display: grid;
+  
+    width: 768px;
+    height: 500px;
+    left: 300px;
+    top: 100px;
+    /*display: none;*/
+ 
+    /*margin: 0 auto;*/
+    grid-gap: 10px;
+    grid-template-columns: repeat(24, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas: 
+    "c c c c c c . . . . o o . . . w w w w w w w w ." 
+    "c c c c c c . . . . o o . . . w w w w w w w w ." 
+    "c c c c c c . . . . o o . . . w w w w w w w w ." 
+    "c c c c c c . . . . o o . . . w w w w w w w w ." 
+    "c c c c c c . . . . o o . . . w w w w w w w w ." 
+    "c c c c c c . . . . o o . . . w w w w w w w w ." 
+    "g g g g g g . . . . . . . . . n n . . r r . . ." 
+    "c c c c c c . . . . . . . . . . . . . . . . . .";
+}
+
+header {
+    height: 75px;
+    width: 100%;
+    color: #FFE11D;
+    background-color: black;
+}
+
+footer {
+    position:absolute;
+    bottom: 0;
+	width:100%;
+    height: 35px;
+    color: #FFE11D;
+    background-color: black;
+
+}
+
+.footer_text {
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    text-align: center;
+    color: #343535;
+    margin:0;
+}
+
+
+a {
+    text-decoration: underline;
+    color: #343535;
+}
+a:hover {
+	color: #FFE11D;
+}
+
+.heart {
+    position: relative;
+    top: 10px;
+    padding: 0;
+}
+
+.circle {
+    grid-area: c;
+    border-radius: 50%;
+    background-color: black;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 5px;
+	margin-right: 5px;
+}
+
+.win {
+    grid-area: w;
+    background-color: black;
+    border-radius: 15%;
+    width: 120px;
+	height: 30px;
+	position: relative;
+	padding: 10px;
+}
+
+.ok_btn {
+    grid-area: o;
+    color: #FFE11D;
+    background-color: black;
+}
+
+.guessed {
+    grid-area: g;
+    background-color: black;
+    border-radius: 15%;
+}
+
+.btn_new {
+    grid-area: n;
+    background-color: black;
+    border-radius: 15%;
+    color: #FFE11D;
+}
+
+.btn_rules {
+    grid-area: r;
+    background-color: black;
+    border-radius: 15%;
+    color: #FFE11D;
+}
+.challenge {
+    position: absolute;
+   right: 100px;
+    bottom: 25px;
+    /*display: none; kad počne igra*/
+    
+  
+ 
+}
+.challenge:hover {
+    
+   
+  filter: sepia(100%);
+}
