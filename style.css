@@ -1,167 +1,197 @@
+@font-face {
+    font-family: myFont;
+    src: url(img/font/thedeadsaloon-Regular.ttf);
+  }
+
+
 
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-     -ms-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
-    margin:0;
-	padding:0;
 }
 
-
-body { 
-    height: 100vh; 
-    background: url(img/myImg/major-locations-south-park-sunshine.png) no-repeat center;
-    background-size: 100% 100%;
-  
-   
+body {
+    height: 100vh;  
+    margin: 0;
+    padding: 0;
 }
 
+#container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+header {
+    height: 10%;
+    width: 100%;
+    background-color: black;
+}
 h1 {
     letter-spacing: 4px;
     word-spacing: 5px;
     text-align: center;
-    color: #FFE11D;
-    margin:0;
-}
-#container {
-   height: 100%;
-	display: flex;
     
+    margin: 0;
+    
+}
+#content {
+    background: url(img/myImg/major-locations-south-park-sunshine.png) gray no-repeat center;
+    background-size: 100% 100%;
+    display: flex;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    /*align-items: flex-end;
+    justify-content: flex-end;*/
   
-/*object-fit: fill;*/
+}
+#game {
+display: grid;
+grid-template-columns: 4.5fr 1fr 4.5fr;
+grid-template-rows: 8fr 2fr;
+grid-template-areas:    "circles ok win"
+                        "result . btns";
+height: 95%;
+width: 60%;
+background-color: rgba(0,0,0, 0.7);
+border-radius: 4%;
+margin-left: 10%;
+margin-right: 10%;
+
 
 }
-.content {
 
-    position: absolute;
-    background-color: black;
-    opacity: 0.5;
-    border-radius: 20px;
-    z-index: 3;
-    display: grid;
-  
-    width: 768px;
-    height: 500px;
-    left: 300px;
-    top: 100px;
-    /*display: none;*/
- 
-    /*margin: 0 auto;*/
-    grid-gap: 1px;
-    grid-template-columns: repeat(24, 1fr);
-    grid-auto-rows: minmax(50px, auto);
-    grid-template-areas: 
-    "c c c c c c . . . . o o . . . w w w w w w w w ." 
-    "c c c c c c . . . . o o . . . w w w w w w w w ." 
-    "c c c c c c . . . . o o . . . w w w w w w w w ." 
-    "c c c c c c . . . . o o . . . w w w w w w w w ." 
-    "c c c c c c . . . . o o . . . w w w w w w w w ." 
-    "c c c c c c . . . . o o . . . w w w w w w w w ." 
-    "g g g g g g . . . . . . . . . n n . . r r . . ." 
-    "c c c c c c . . . . . . . . . . . . . . . . . .";
+#challenge {
+    height: 50%;
+    width: 20%;
+    margin-right: 20%;
+    margin-right: 20%;
+    margin-bottom: 11%;
+    display: none;
 }
-
-header {
-    height: 75px;
-    width: 100%;
-    color: #FFE11D;
-    background-color: black;
+   
+#challenge:hover {
+       filter: sepia(100%);
 }
 
 footer {
-    position:absolute;
-    bottom: 0;
-	width:100%;
-    height: 35px;
+    width: 100%;
+    height: 10%;
     color: #FFE11D;
     background-color: black;
-
 }
 
-.footer_text {
-    letter-spacing: 4px;
-    word-spacing: 5px;
+#footer_text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #343535;
+    letter-spacing: 8px;
+    word-spacing: 6px;
     text-align: center;
-    color: #343535;
-    margin:0;
+    margin: 1.5% 2%; 
 }
-
-
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #343535;
 }
+
 a:hover {
-	color: #FFE11D;
+    color: #FFE11D;
 }
 
-.heart {
+#heart {
     position: relative;
-    top: 10px;
-    padding: 0;
-}
-.div_circle
-.circle {
-    grid-area: c;
-    border-radius: 50%;
-    background-color: rgb(230, 16, 16);
-    height: 30px;
-    cursor: pointer;
-    margin-left: 5px;
-	margin-right: 5px;
+    top: 6px;
+    padding-left: 15px;
+   margin: 0;
+ 
 }
 
-.win {
-    grid-area: w;
-    background-color: rgb(228, 41, 41);
-    border-radius: 15%;
-    width: 120px;
-	height: 30px;
-	position: relative;
-	padding: 10px;
+#circles {
+    grid-area: circles;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    border-bottom-style: outset;
+    border-width:5px;  
+    border-bottom-color: rgb(0, 0, 0);
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+#circles div {
+    margin-bottom: 5%;
+}
+#ok {
+    grid-area: ok;  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr); 
+    margin-top: 30%;
+    
 }
 
 .ok_btn {
-    grid-area: o;
-    color: #FFE11D;
-    height: 40px;
-    width: 50px;
-    background-color: rgb(235, 38, 38);
+    border-radius: 15%;
+    background-color: rgb(0, 0, 0, 0.9);
+    width: 65%;
+    height: 65%;
+    /*margin-left: 10%;*/
+     margin-right: 10%;
+     
 }
 
-.guessed {
-    grid-area: g;
-    background-color: rgb(236, 31, 31);
-    border-radius: 15%;
+#win {
+    grid-area: win;  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    margin-top: 7%;
 }
 
-.btn_new {
-    grid-area: n;
-    background-color: rgb(238, 27, 27);
-    border-radius: 15%;
-    height: 40px;
-    width: 50px;
-    color: #FFE11D;
+#win div {
+    height: 65%;
+    width: 85%;
+    border-radius: 15px;
+    background-color: rgb(0, 0, 0, 0.9);
+    margin-left: 7%;
+    margin-right: 8%;
 }
 
-.btn_rules {
-    grid-area: r;
-    background-color: rgb(236, 34, 34);
+.win img {
+    margin-left: 10%;
+    margin-top: 2%;
+    opacity: 0.7;
+}
+
+#result {
+    grid-area: result;  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; 
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+#btns {
+    grid-area: btns;
+    display: flex; 
+}
+
+#btns div {
     border-radius: 15%;
-    color: #FFE11D;
-}
-.challenge {
-    position: absolute;
-   right: 100px;
-    bottom: 35px;
-    /*display: none; kad počne igra*/
-    
-  
- 
-}
-.challenge:hover {
-    
+    background-color: rgb(0, 0, 0, 0.9);
+    width: 55px;
+    height: 55px;
+    margin-left: 15%;
+    margin-top: 5%;
    
-  filter: sepia(100%);
+}
+.text_dead {
+    font-weight: 800;
+    font-family: myFont;
+    color: #FFE11D;
 }
