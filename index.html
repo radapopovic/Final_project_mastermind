@@ -2,106 +2,238 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="img/myImg/kenny.png" sizes="32x32" type="image/png">
-    
-    <!--<a href="https://www.freepik.com/free-photos-vectors/icon">Icon vector created by rawpixel.com - www.freepik.com</a>" />-->
-    <title>South Park Master</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="img/kenny.png" sizes="32x32" type="image/png">
+
+        <!--<a href="https://www.freepik.com/free-photos-vectors/icon">Icon vector created by rawpixel.com - www.freepik.com</a>" />-->
+        <title>South Park Mastermind</title>
 </head>
 
 <body>
-    <div id="container">
+        <div id="container">
 
-        <header>
+                <div id="modalLost" class="modalLost">
+                        <div id="modalContentLost">
+                                <span class="close2" id="closeLost">&times;</span>
+                        </div>
+                </div>
 
-            <!--mozda neki logo ubaciti i još ponešto-->
+                <div id="modalWon" class="modalWon">
+                        <div id="modalContentWon">
+                                <span class="close1" id="closeWon">&times;</span>
 
-            <h1 class="text_dead">SOUTH PARK MASTERMIND</h1>
-        </header>
+                                <img src="img/kennyDance.gif" id="kennyDance" alt="kenny makes winning dance">
+                        </div>
+                </div>
+
+                <div id="modalRules" class="modalRules">
+                        <div id="modalContentRules">
+                                <span class="close" id="closeRules">&times;</span>
+
+                                <h1>Rules</h1>
+                                <p class="mainRulesText">
+                                        South Park Mastermind is version of a Mastermind, code-breaking game based on an
+                                        older, paper game called Bulls and
+                                        Cows. Try to guess the pattern, in both order and character, within six turns.
+                                        After
+                                        submitting a row, a green check mark is placed for each code peg from the
+                                        guess
+                                        which is correct in both character and position. A white check mark
+                                        indicates the existence
+                                        of a correct character code peg placed in the wrong position. If you want to
+                                        learn basic principles of scientific reasoning and develop your logic skills,
+                                        raise this game to a higher level, follow <a
+                                                href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3022521/"
+                                                target="_blank">this
+                                                link</a>. </p>
+                                                 <p class="smallText">This is an implementaion of a game Mastermind that I have made as
+                                                a student for my final project of Front-end programming course at <a
+                                                        href="https://code.edu.rs/" target="_blank">Comtrade academy</a>. All images and web-materials are
+                                                used for educational purposes only.</p>
+                               
+                        </div>
+                </div>
+
+                <header>
+
+                        <!--mozda neki logo ubaciti i još ponešto-->
+
+                        <h1 class="textDead">SOUTH PARK MASTERMIND</h1>
+                </header>
 
 
-        <div id="content">
-            <div id="game">
-                <div id="circles">
-                    <div id="pic_1_0" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_1_1" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_1_2" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_1_3" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_2_0" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_2_1" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_2_2" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_2_3" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_3_0" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_3_1" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_3_2" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_3_3" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_4_0" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_4_1" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_4_2" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_4_3" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_5_4" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_5_1" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_5_2" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_5_3" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_6_0" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_6_1" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_6_2" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    <div id="pic_6_3" class="guess"><img src="img/myImg/pic_0.png" alt="locked game peg"></div>
-                    
-                </div><!--circles-->
+                <div id="content">
+                        <div id="game">
+                                <div id="circles">
+                                        <div id="pic_1_0" data-value="0" class="guess enabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_1_1" data-value="0" class="guess enabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_1_2" data-value="0" class="guess enabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_1_3" data-value="0" class="guess enabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_2_0" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_2_1" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_2_2" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_2_3" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_3_0" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_3_1" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_3_2" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_3_3" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_4_0" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_4_1" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_4_2" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_4_3" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_5_0" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_5_1" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_5_2" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_5_3" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_6_0" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_6_1" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_6_2" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
+                                        <div id="pic_6_3" data-value="0" class="guess disabled"><img
+                                                        src="img/pic_0.png" alt="locked game peg"></div>
 
-                <div id="ok">
-                        <div id="mm_1_ok" class="ok_btn text_dead">OK</div>
-                        <div id="mm_2_ok" class="ok_btn text_dead">OK</div>
-                        <div id="mm_3_ok" class="ok_btn text_dead">OK</div>
-                        <div id="mm_4_ok" class="ok_btn text_dead">OK</div>
-                        <div id="mm_5_ok" class="ok_btn text_dead">OK</div>
-                        <div id="mm_6_ok" class="ok_btn text_dead">OK</div>
-                </div><!--ok-->
+                                </div>
+                                <!--circles-->
 
-               <div id="win">
-                    <div id="mm_1_win" class="win">
-                            <img src="img/myImg/win_1.png" alt="green right place mark result">
-                            <img src="img/myImg/win_1.png" alt="green right place mark result">
-                            <img src="img/myImg/win_0.png" alt="green right place mark result">
-                            <img src="img/myImg/win_0.png" alt="green right place mark result">
-                    </div>
-                    <div id="mm_2_win" class="win"></div>
-                    <div id="mm_3_win" class="win"></div>
-                    <div id="mm_4_win" class="win"></div>
-                    <div id="mm_5_win" class="win"></div>
-                    <div id="mm_6_win" class="win"></div>
-               </div><!--win-->
+                                <div id="ok">
+                                        <div id="mm_1_ok" class="ok_btn textSouth"><p class="okPBtn">OK</p></div>
+                                        <div id="mm_2_ok" class="ok_btn textSouth"><p class="okPBtn">OK</p></div>
+                                        <div id="mm_3_ok" class="ok_btn textSouth"><p class="okPBtn">OK</p></div>
+                                        <div id="mm_4_ok" class="ok_btn textSouth"><p class="okPBtn">OK</p></div>
+                                        <div id="mm_5_ok" class="ok_btn textSouth"><p class="okPBtn">OK</p></div>
+                                        <div id="mm_6_ok" class="ok_btn textSouth"><p class="okPBtn">OK</p></div>
+                                </div>
+                                <!--ok-->
 
-               <div id="result">
-                    <div id="result_0" class="circle"><img src="img/myImg/pic_7.png" alt="green question mark result"></div>
-                    <div id="result_1" class="circle"><img src="img/myImg/pic_7.png" alt="green question mark result"></div>
-                    <div id="result_2" class="circle"><img src="img/myImg/pic_7.png" alt="green question mark result"></div>
-                    <div id="result_3" class="circle"><img src="img/myImg/pic_7.png" alt="green question mark result"></div>
-               </div><!--result-->
+                                <div id="win">
+                                        <div id="mm_1_win" class="win">
+                                                <img src="img/win_transparent.png" id="win_1_0"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_1_1"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_1_2"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_1_3"
+                                                        alt="green right place mark result">
+                                        </div>
+                                        <div id="mm_2_win" class="win">
+                                                <img src="img/win_transparent.png" id="win_2_0"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_2_1"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_2_2"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_2_3"
+                                                        alt="green right place mark result">
+                                        </div>
+                                        <div id="mm_3_win" class="win">
+                                                <img src="img/win_transparent.png" id="win_3_0"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_3_1"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_3_2"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_3_3"
+                                                        alt="green right place mark result">
+                                        </div>
+                                        <div id="mm_4_win" class="win">
+                                                <img src="img/win_transparent.png" id="win_4_0"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_4_1"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_4_2"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_4_3"
+                                                        alt="green right place mark result">
+                                        </div>
+                                        <div id="mm_5_win" class="win">
+                                                <img src="img/win_transparent.png" id="win_5_0"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_5_1"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_5_2"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_5_3"
+                                                        alt="green right place mark result">
+                                        </div>
+                                        <div id="mm_6_win" class="win">
+                                                <img src="img/win_transparent.png" id="win_6_0"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_6_1"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_6_2"
+                                                        alt="green right place mark result">
+                                                <img src="img/win_transparent.png" id="win_6_3"
+                                                        alt="green right place mark result">
+                                        </div>
+                                </div>
+                                <!--win-->
 
-               <div id="btns">
-                    <div id="new_game" class="btn_new text_dead">NEW GAME</div>
-                    <div id="rules" class="btn_rules text_dead">RULES</div>
-               </div>
-    
-            </div><!--game-->
-            <div id="challenge">
-                <img src="img/myImg/challenge.png" class="challenge" alt="challenge your brain wooden guide mark">
-            </div>
-        </div> <!--content-->
+                                <div id="result">
+                                        <div id="result_0" class="circle"><img src="img/pic_7.png"
+                                                        alt="green question mark result">
+                                        </div>
+                                        <div id="result_1" class="circle"><img src="img/pic_7.png"
+                                                        alt="green question mark result">
+                                        </div>
+                                        <div id="result_2" class="circle"><img src="img/pic_7.png"
+                                                        alt="green question mark result">
+                                        </div>
+                                        <div id="result_3" class="circle"><img src="img/pic_7.png"
+                                                        alt="green question mark result">
+                                        </div>
+                                </div>
+                                <!--result-->
 
-        <footer>
-            <p class="text_dead" id="footer_text"> built with <a href="radin git" target="_blank">radapopovic</a> by<img
-                    src="img/myImg//heart.png" id="heart" alt="cute little gray heart">
-            </p>
-        </footer>
+                                <div id="btns">
+                                        <div id="newGameBtn" class="btn_new textSouth"><p class="btnsP"> NEW GAME</p></div>
+                                        <div id="rulesBtn" class="btn_rules textSouth"><p> RULES</p></div>
+                                </div>
 
-    </div><!--container-->
-    <script src="script.js"></script>
+                        </div>
+                        <!--game-->
+                        <!--<div id="challenge">
+                                <img src="img/challenge.png" class="challenge"
+                                        alt="challenge your brain wooden guide mark">
+                        </div>-->
+                </div>
+                <!--content-->
+
+                <footer>
+                        <p class="textDead" id="footer_text"> built with <a href="radin git"
+                                        target="_blank">rada popovic</a> by<img src="img/heart.png" id="heart"
+                                        alt="cute little gray heart">
+                        </p>
+                </footer>
+
+        </div>
+        <!--container-->
+        <script src="script.js"></script>
 </body>
 
 </html>

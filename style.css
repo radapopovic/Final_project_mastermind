@@ -1,9 +1,12 @@
 @font-face {
     font-family: myFont;
-    src: url(img/font/thedeadsaloon-Regular.ttf);
-  }
+    src: url(font/RioOroItalic.otf);
+}
 
-
+@font-face {
+    font-family: southFont;
+    src: url(font/southPark.ttf);
+}
 
 * {
     -webkit-box-sizing: border-box;
@@ -13,7 +16,7 @@
 }
 
 body {
-    height: 100vh;  
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -23,21 +26,24 @@ body {
     height: 100%;
     flex-direction: column;
 }
+
 header {
     height: 10%;
     width: 100%;
     background-color: black;
 }
+
 h1 {
-    letter-spacing: 4px;
+    letter-spacing: 14px;
     word-spacing: 5px;
+    
+    font-size: 2.7rem;
     text-align: center;
-    
     margin: 0;
-    
 }
+
 #content {
-    background: url(img/myImg/major-locations-south-park-sunshine.png) gray no-repeat center;
+    background: url(img/major-locations-south-park-sunshine.png) gray no-repeat center;
     background-size: 100% 100%;
     display: flex;
     height: 80%;
@@ -45,24 +51,21 @@ h1 {
     justify-content: center;
     /*align-items: flex-end;
     justify-content: flex-end;*/
-  
 }
+
 #game {
-display: grid;
-grid-template-columns: 4.5fr 1fr 4.5fr;
-grid-template-rows: 8fr 2fr;
-grid-template-areas:    "circles ok win"
-                        "result . btns";
-height: 95%;
-width: 60%;
-background-color: rgba(0,0,0, 0.7);
-border-radius: 4%;
-margin-left: 10%;
-margin-right: 10%;
-
-
+    display: grid;
+    grid-template-columns: 4.5fr 1fr 4.5fr;
+    grid-template-rows: 8fr 2fr;
+    grid-template-areas: "circles ok win" "result . btns";
+    height: 95%;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-
+/*
 #challenge {
     height: 50%;
     width: 20%;
@@ -71,11 +74,11 @@ margin-right: 10%;
     margin-bottom: 11%;
     display: none;
 }
-   
-#challenge:hover {
-       filter: sepia(100%);
-}
 
+#challenge:hover {
+    filter: sepia(100%);
+}
+*/
 footer {
     width: 100%;
     height: 10%;
@@ -90,8 +93,35 @@ footer {
     letter-spacing: 8px;
     word-spacing: 6px;
     text-align: center;
-    margin: 1.5% 2%; 
+    margin: 1.5% 2%;
 }
+
+.textDead {
+    font-weight: 800;
+    font-family: myFont;
+    color: #FFE11D;
+}
+
+.textSouth {
+    font-weight: 800;
+    font-family: southFont;
+    color: #FFE11D;
+}
+
+.mainRulesText {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    line-height: 120%;
+}
+
+.smallText {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    line-height: 160%;
+}
+
 a {
     text-decoration: none;
     color: #343535;
@@ -99,14 +129,14 @@ a {
 
 a:hover {
     color: #FFE11D;
+    font-size: 1.2rem;
 }
 
 #heart {
     position: relative;
     top: 6px;
     padding-left: 15px;
-   margin: 0;
- 
+    margin: 0;
 }
 
 #circles {
@@ -115,36 +145,41 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     border-bottom-style: outset;
-    border-width:5px;  
+    border-width: 5px;
     border-bottom-color: rgb(0, 0, 0);
     margin-left: 8%;
     margin-top: 5%;
     margin-right: 10%;
 }
+
 #circles div {
     margin-bottom: 5%;
 }
+
 #ok {
-    grid-area: ok;  
+    grid-area: ok;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr); 
+    grid-template-rows: repeat(6, 1fr);
     margin-top: 30%;
-    
 }
 
 .ok_btn {
+    opacity: 0;
     border-radius: 15%;
-    background-color: rgb(0, 0, 0, 0.9);
+    background-color: rgb(0, 0, 0);
     width: 65%;
     height: 65%;
-    /*margin-left: 10%;*/
-     margin-right: 10%;
-     
+    margin-right: 5%;
+}
+.okPBtn {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 25%;
 }
 
 #win {
-    grid-area: win;  
+    grid-area: win;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
@@ -155,7 +190,7 @@ a:hover {
     height: 65%;
     width: 85%;
     border-radius: 15px;
-    background-color: rgb(0, 0, 0, 0.9);
+    background-color: rgb(0, 0, 0);
     margin-left: 7%;
     margin-right: 8%;
 }
@@ -167,10 +202,10 @@ a:hover {
 }
 
 #result {
-    grid-area: result;  
+    grid-area: result;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr; 
+    grid-template-rows: 1fr;
     margin-left: 8%;
     margin-top: 5%;
     margin-right: 10%;
@@ -178,20 +213,162 @@ a:hover {
 
 #btns {
     grid-area: btns;
-    display: flex; 
+    display: flex;
+    padding-left: 15%;
 }
 
-#btns div {
+#btns:hover {
+    cursor: pointer;
+}
+
+#newGameBtn {
     border-radius: 15%;
-    background-color: rgb(0, 0, 0, 0.9);
-    width: 55px;
+    background-color: rgb(0, 0, 0);
+    width: 65px;
     height: 55px;
     margin-left: 15%;
     margin-top: 5%;
+}
+
+#rulesBtn {
+    border-radius: 15%;
+    background-color: rgb(0, 0, 0);
+    width: 65px;
+    height: 55px;
+    margin-left: 15%;
+    margin-top: 5%; 
+    padding-left: 2%;
+    padding-top: 2%;
+}
+
+.btnsP {
+    text-align: center;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+/*POP-UP RULES*/
+.modalRules {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 27%;
+    top: 15px;
+    width: 600px;
+    height: 500px;
+    overflow: visible;
+    border-radius: 6px;
+}
+
+#modalContentRules {
+    background-color: #000000;
+    color: white;
+    font-family: southFont;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px;
+    height: 500px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 40px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*POP-UP GAME OVER*/
+.modalLost {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 27%;
+    top: 15px;
+    width: 600px;
+    height: 500px;
+    overflow: visible;
+    border-radius: 6px;
+}
+
+#modalContentLost {
+    background: url(img/gameOver.png) no-repeat center;
+    margin: 15% auto;
+    padding: 20px;
+    width: 600px;
+    height: 500px;
+    border-radius: 6px;
+}
+
+.close2 {
+    color: red;
+    float: right;
+    font-size: 40px;
+    margin-right: 75px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.close2:hover, .close2:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*POP-UP WON*/
+.modalWon {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 27%;
+    top: 15px;
+    width: 600px;
+    height: 500px;
+    overflow: visible;
    
 }
-.text_dead {
-    font-weight: 800;
-    font-family: myFont;
-    color: #FFE11D;
+
+#modalContentWon {
+    background: url(img/kennyWon.png) no-repeat center;
+    margin: 15% auto;
+   /* padding: 20px;*/
+   /* border: 1px solid #888;*/
+    width: 100%;
+    height: 100%;
+    /*text-align: center;*/
+    border-radius: 6px;
+   
 }
+#kennyDance {
+    height: 200px;
+    margin-top: 250px;
+    margin-left: 180px;
+  /*  border-radius: 6px;*/
+}
+
+.close1 {
+    color: red;
+    float: right;
+    font-size: 40px;
+    margin-right: 100px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.close1:hover, .close1:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
