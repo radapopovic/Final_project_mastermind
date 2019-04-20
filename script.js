@@ -9,7 +9,7 @@ function createResult() {
    for (i = 0; i < 4; i++) {
       resultArray[i] = Math.floor((Math.random() * 6) + 1);
    }
-   console.log(resultArray);
+  // console.log(resultArray);
 }
 /* compare guessArray and resultArray and create winArray for display*/
 function checkResult(guessArray) {
