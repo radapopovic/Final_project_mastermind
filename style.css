@@ -172,6 +172,9 @@ a:hover {
     height: 65%;
     margin-right: 5%;
 }
+.ok_btn:hover {
+    cursor: pointer;
+}
 .okPBtn {
     text-align: center;
     font-size: 1.1rem;
