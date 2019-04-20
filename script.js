@@ -44,9 +44,9 @@ function showWin(winArray) {
       let newSrc = "";
       if (winArray[i] === 1) {
          count++;
-         newSrc = "img/myImg/win_1.png";
+         newSrc = "img/win_1.png";
       } else {
-         newSrc = "img/myImg/win_0.png";
+         newSrc = "img/win_0.png";
       }
       document.getElementById(id).src = newSrc;
    }
@@ -90,7 +90,7 @@ function enableNextRow() {
 function revealResult() {
    for (let i = 0; i < resultArray.length; i++) {
       let id = "result_" + i;
-      let newSrc = "img/myImg/pic_" + resultArray[i] + ".png";
+      let newSrc = "img/pic_" + resultArray[i] + ".png";
       document.getElementById(id).firstElementChild.src = newSrc;
    }
 
@@ -126,7 +126,7 @@ function changeImage(id) {
       number++;
    }
 
-   let newSrc = "img/myImg/pic_" + number + ".png";
+   let newSrc = "img/pic_" + number + ".png";
    x.firstElementChild.src = newSrc;
    x.setAttribute("data-value", number);
 }
