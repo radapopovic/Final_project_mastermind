@@ -1,5 +1,6 @@
 # Final_project_mastermind
 Final project for Front-end programming course as mastermind game in vanilla JS and CSS.
+
 This is an implementation of a Mastermind game built with HTML5, CSS and JS, with no external libraries. This old game now has new skin, pegs are replaced with South Park characters. 
 
 START
@@ -9,7 +10,9 @@ When you open the game function createResult() is called. This function empty ar
 MORE 
 
 If you want to know more about the game itself, learn how to crack the code, see my school, click on hint button. At the bottom of the page, there is a github link to my repository.  
+
 TO DO LIST
+
     • RESPONSIVE DESIGN
     • EASY, MEDIUM AND HARD LEVEL
     • TIMER
