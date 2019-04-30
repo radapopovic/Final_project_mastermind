@@ -12,7 +12,6 @@ MORE
 If you want to know more about the game itself, learn how to crack the code, see my school, click on hint button. At the bottom of the page, there is a github link to my repository.  
 
 TO DO LIST
-
     • RESPONSIVE DESIGN
     
     • EASY, MEDIUM AND HARD LEVEL
